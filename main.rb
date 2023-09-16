@@ -3,10 +3,22 @@ require_relative './chess_part/pieces/bishop.rb'
 require_relative './chess_part/pieces/board_render.rb'
 require_relative './chess_part/pieces/pieces_routes.rb'
 
-b = Board.new
+# b = Board.new
 
-b[[2, 2]] = King.new(b, [2, 2], :black)
-p b[[2, 2]].available_moves 
+# b[[2, 2]] = King.new(b, [2, 2], :black)
+# p b[[2, 2]].available_moves 
+
+b = Board.start_chess
+text_board = BoardRendererText.new(b)
+
+
+
+b[[2, 2]] = Pawn.new(b, [2, 2], :white)
+b[[2, 0]] = Pawn.new(b, [2, 2], :white)
+
+
+p b[[1, 2]].available_moves
+puts text_board.render
 
 # loc = [5, 8]
 # b[loc] = c
