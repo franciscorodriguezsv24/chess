@@ -1,7 +1,6 @@
 require_relative './chess_part/board.rb'
-require_relative './chess_part/pieces/bishop.rb'
-require_relative './chess_part/pieces/board_render.rb'
-require_relative './chess_part/pieces/pieces_routes.rb'
+require_relative './chess_part/board_render.rb'
+require_relative './chess_part/pieces_routes.rb'
 require_relative './chess_part/game.rb'
 require_relative './chess_part/player.rb'
 require_relative './chess_part/invalid_error.rb'
@@ -11,12 +10,11 @@ require_relative './chess_part/invalid_error.rb'
 
 
 b = Board.start_chess
-
 g = Game.new(
-    b, 
-    Player.new(:black),
-    Player.new(:white),
-    BoardRendererText
+  b, 
+  Player.new(:black), 
+  Player.new(:white),
+  BoardRendererText
 )
 g.play
 

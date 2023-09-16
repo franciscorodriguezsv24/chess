@@ -1,2 +1,3 @@
 class InvalidMoveError < ArgumentError
 end
+
