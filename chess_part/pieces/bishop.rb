@@ -1,9 +1,6 @@
-class Bishop
-    attr_reader :color 
+class Bishop < Piece
 
-    def initialize(color)
-        @color = color
-    end
+    include Slideable
 
     def to_s
         color == :black ? "♝" : "♗"

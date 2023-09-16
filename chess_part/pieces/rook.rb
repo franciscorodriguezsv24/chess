@@ -1,12 +1,11 @@
-class Rook 
-    def initialize(color)
-        @color = color 
-    end
+class Rook < Piece
+
+    include Slideable 
 
     def to_s
         @color == :black ? "♜" : "♖"
     end
-    
+
     def move_dirs
         [
             [0, 1],

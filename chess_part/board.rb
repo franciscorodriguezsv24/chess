@@ -1,9 +1,4 @@
-require_relative './pieces/bishop.rb'
-require_relative './pieces/king.rb'
-require_relative './pieces/knight.rb'
-require_relative './pieces/pawn.rb'
-require_relative './pieces/queen.rb'
-require_relative './pieces/rook.rb'
+require_relative './pieces/pieces_routes.rb'
 
 
 class Board 
@@ -49,5 +44,9 @@ class Board
         row, column = location 
 
         row < grid.length && column < grid.first.length && row >= 0 && column >= 0 
+    end
+    def empty?(location)
+        row, column = location
+        grid[row][column].nil?
     end
 end
