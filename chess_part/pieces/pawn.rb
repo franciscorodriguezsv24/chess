@@ -1,8 +1,7 @@
 class Pawn 
     attr_reader :color 
 
-    def initialize(location, color)
-        @location = location
+    def initialize(color)
         @color = color
     end
 
@@ -15,12 +14,4 @@ class Pawn
             [0, 1]
         ]
     end 
-
-    def row
-        @location.first
-    end
-
-    def column
-        @location.last
-    end
 end
